@@ -151,4 +151,4 @@ topChars = sorted(topChatters, key=lambda count: count['charCount'], reverse=Tru
 # render the output with Jinja2's templating system from the data.
 jinjaEnv = Environment(loader=FileSystemLoader('.', encoding='utf-8'))
 template = jinjaEnv.get_template("skypeChatStatsTemplateEn.txt")
-print template.render(topCounts=topCounts, topUrls=topUrls, topChars=topChars, meta=meta)
+print template.render(topCounts=topCounts, topUrls=topUrls, topChars=topChars, meta=meta).decode('utf-8')
